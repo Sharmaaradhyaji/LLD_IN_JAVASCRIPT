@@ -1,145 +1,195 @@
 # LLD in JavaScript & TypeScript
 
-**Low Level Design for the language you actually ship with.**
+### Low Level Design for the language you _actually_ ship with
 
-Most LLD courses live in Java or C++. This repo is different — we learn the same interview patterns in **JavaScript and TypeScript**, the stack that powers the web, Node backends, and a huge chunk of modern startups.
+Most LLD courses live in Java or C++. Cool. But then the interviewer says _"design it"_… and your day job is **JavaScript**.
 
-> Preview every markdown lesson with **Cmd / Ctrl + Shift + V** — diagrams and tables look way better in preview.
+This repo is the bridge: same interview energy, same SOLID brain, but in **JS / TS** — with docs that don't put you to sleep.
 
----
-
-## Why this exists
-
-Interviewers ask:
-
-> *"Design a parking lot / Google Docs / notification system…"*
-
-They expect classes, SOLID, design patterns — and then you open your editor… and you're writing **JavaScript**.
-
-This repo bridges that gap:
-
-| What you get | How |
-|--------------|-----|
-| Beginner-friendly docs | Plain English first, jargon second |
-| Side-by-side learning | Broken design → SOLID refactor |
-| Runnable TypeScript | `npm run demo` — see it work |
-| Interview focus | The designs people actually ask |
+> **Pro tip:** Hit **Cmd / Ctrl + Shift + V** on any `.md` file. Mermaid diagrams and tables suddenly look _chef's kiss_.
 
 ---
 
-## What is JavaScript (and why should you care)?
+## Your learning journey
 
-**JavaScript** started as a tiny language for making web pages interactive. Today it runs:
+![Mastering LLD in JavaScript — learning journey from OOP to case studies](./assets/lld-learning-journey.jpg)
 
-- **Browsers** — every major site
+We climb the ladder one rung at a time:
+
+| Step                   | What you unlock                                                                         |
+| ---------------------- | --------------------------------------------------------------------------------------- |
+| **1. OOP**             | Classes, objects, inheritance, encapsulation, polymorphism (yes — even with prototypes) |
+| **2. SOLID**           | Five letters that stop your codebase from becoming spaghetti                            |
+| **3. Design Patterns** | Singleton, Factory, Adapter, Decorator, Observer, Strategy… the greatest hits           |
+| **4. UML**             | Draw relationships so your design survives a whiteboard                                 |
+| **5. Case Studies**    | Parking Lot, URL Shortener, Google Docs — apply everything                              |
+
+No rush. Sip coffee. Break things. Fix them with better design.
+
+---
+
+## Why this exists (aka the interview plot twist)
+
+Interviewer:
+
+> _"Design a parking lot / Google Docs / notification system…"_
+
+You:
+
+> _opens laptop… it's JavaScript… sweating intensifies_
+
+They expect classes, SOLID, and patterns. You expect `async/await` and React components. **Both can be true.**
+
+| What you get           | The vibe                               |
+| ---------------------- | -------------------------------------- |
+| Beginner-friendly docs | Plain English first, jargon second     |
+| Side-by-side learning  | Broken design → "aha" → SOLID refactor |
+| Runnable TypeScript    | `npm run demo` and watch it click      |
+| Interview focus        | The questions people _actually_ ask    |
+
+---
+
+## Wait… what even _is_ JavaScript?
+
+**JavaScript** started as "make the button do a thing on a webpage." Plot twist: it took over the world.
+
+Today it runs:
+
+- **Browsers** — basically the entire internet
 - **Servers** — Node.js, Deno, Bun
 - **Apps** — React Native, Electron
-- **Tooling** — build systems, CLIs, AI agents
+- **Tooling** — CLIs, build tools, agents, vibes
 
-If you write software in 2026, odds are high you'll touch JS or its typed cousin **TypeScript**.
+If you write software in 2026, you'll almost definitely touch JS or its typed best friend **TypeScript**.
 
 ### The awkward truth: JS is not "OOP-first"
 
-JavaScript is **multi-paradigm**:
+JavaScript is a **multi-paradigm** shapeshifter:
 
-- Functions and closures feel natural
-- Objects are flexible bags of properties
-- Classes (since ES6) are mostly **syntactic sugar** over prototypes
-- No true private members for years; no interfaces without TypeScript
+- Functions and closures feel like home
+- Objects are flexible bags of "whatever you put in them"
+- `class` (since ES6) is mostly **sugar** on top of prototypes
+- For years: no real privacy, no interfaces (hello TypeScript)
 
-So why learn OOP / LLD / SOLID in JS at all?
+So… why bother with OOP / LLD / SOLID in JS?
 
-### Because design is about *thinking*, not syntax
+### Because design is about _thinking_, not syntax
 
-| Reality | What that means for you |
-|---------|-------------------------|
-| Teams still use classes & modules | You need to read and write them |
-| Interviews expect LLD vocabulary | SOLID, Strategy, Factory — language-agnostic |
-| Bad structure scales badly | A 200-line "god file" hurts in JS *more* than in Java |
-| TypeScript adds interfaces & types | Suddenly DIP and ISP feel natural |
-| React / Nest / Angular lean on patterns | Composition, DI, SRP show up every day |
+| Reality check                        | What it means for you                            |
+| ------------------------------------ | ------------------------------------------------ |
+| Teams still ship classes & modules   | You'll read and write them                       |
+| Interviews speak LLD                 | SOLID, Strategy, Factory — language doesn't care |
+| Bad structure scales badly           | A 200-line god file hurts in JS _extra hard_     |
+| TypeScript adds interfaces           | Suddenly DIP & ISP feel natural                  |
+| React / Nest / Angular love patterns | Composition, DI, SRP show up every Tuesday       |
 
-**Bottom line:** JS won't force OOP on you. *You* choose structure. LLD teaches you to choose well — so your codebase doesn't become spaghetti as features pile on.
-
----
-
-## How to learn here
-
-1. **Read the design doc** (Cmd/Ctrl + Shift + V)
-2. **Open the matching `.ts` file** — comments explain the "why"
-3. **Run the demo** — watch console output
-4. **Compare basic vs improved** — same feature, better design
-
-That arc — *problem → smell → principle → code* — is what interviews reward.
+**Bottom line:** JS won't force good design on you. _You_ choose structure. LLD is how you choose well — so features don't turn your repo into lasagna.
 
 ---
 
-## Getting started
+## How to learn here (the fun way)
+
+1. **Read the design doc** → Cmd/Ctrl + Shift + V
+2. **Open the `.ts` file** → comments gossip about the "why"
+3. **Run the demo** → console goes brrr
+4. **Compare basic vs improved** → same feature, zero spaghetti
+
+The magic arc every time:
+
+> **problem → smell → principle → code**
+
+That's interview muscle memory.
+
+---
+
+## Get started in 10 seconds
 
 ```bash
 npm install
-npm run demo            # all demos
-npm run demo:basic      # Google Docs — naive version
-npm run demo:improved   # Google Docs — SOLID version
+npm run demo                 # everything
+npm run demo:basic           # Google Docs — naive
+npm run demo:improved        # Google Docs — SOLID
+npm run demo:simple-factory  # Nestlé Simple Factory
+npm run demo:factory-method  # Nestlé Factory Method
+npm run demo:abstract-factory # Nestlé Abstract Factory
+npm run demo:factory         # all three factory demos
 ```
 
 ---
 
-## Lessons
+## Lessons so far
 
 ### 1. Design Google Docs
 
-A classic interview warm-up: document model, rendering, persistence.
+Classic warm-up: model a document, render it, save it. First we do it _wrong_ on purpose. Then we make it beautiful.
 
-| Resource | What you'll learn |
-|----------|-------------------|
-| [basic-design_docs.md](./Design_GoogleDocs/basic-design_docs.md) | Naive "god class" + where SOLID breaks |
+| Resource                                                               | What you'll learn                          |
+| ---------------------------------------------------------------------- | ------------------------------------------ |
+| [basic-design_docs.md](./Design_GoogleDocs/basic-design_docs.md)       | Naive "god class" + where SOLID cries      |
 | [improved-design_docs.md](./Design_GoogleDocs/improved-design_docs.md) | Full SOLID walkthrough + pluggable storage |
-| [basic.ts](./Design_GoogleDocs/basic.ts) | Runnable anti-pattern |
-| [improved.ts](./Design_GoogleDocs/improved.ts) | Runnable refactor (File / DB / In-memory) |
+| [basic.ts](./Design_GoogleDocs/basic.ts)                               | Runnable anti-pattern                      |
+| [improved.ts](./Design_GoogleDocs/improved.ts)                         | Runnable refactor — File / DB / In-memory  |
 
-**Idea in one line:** start with one class that does everything, then split into Document → Elements → Renderer → Persistence.
+**One-liner:** one class that does everything → Document → Elements → Renderer → Persistence.
+
+### 2. Factory Pattern (Nestlé)
+
+Stop writing `new Maggi()` everywhere. Ask a factory. Same Nestlé story across all three flavors.
+
+| Resource                                                                                      | What you'll learn                         |
+| --------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| [Understanding_pattern.md](./creational_pattern/factory_pattern/Understanding_pattern.md)     | Definition + Simple vs Method vs Abstract |
+| [simpleFactory.md](./creational_pattern/factory_pattern/SimpleFactory/simpleFactory.md)       | One Nestlé plant, `createProduct(type)`   |
+| [simpleFactory.ts](./creational_pattern/factory_pattern/SimpleFactory/simpleFactory.ts)       | Maggi / KitKat / Milo                     |
+| [factoryMethod.md](./creational_pattern/factory_pattern/FactoryMethod/factoryMethod.md)       | India vs Swiss — one product at a time    |
+| [factoryMethod.ts](./creational_pattern/factory_pattern/FactoryMethod/factoryMethod.ts)       | Same type → different Maggi               |
+| [abstractFactory.md](./creational_pattern/factory_pattern/AbstractFactory/abstractFactory.md) | India vs Swiss — full combo pack          |
+| [abstractFactory.ts](./creational_pattern/factory_pattern/AbstractFactory/abstractFactory.ts) | Noodles + Chocolate + Drink together      |
+
+**One-liner:** Simple = one switch. Method = subclass picks one product. Abstract = subclass builds a matching family.
 
 ---
 
-## Roadmap (coming next)
+## Roadmap (the adventure continues)
 
-This repo will grow into a full interview-style LLD track in TS/JS, including:
+Following the journey map above:
 
-- [ ] SOLID principles (deep dive, standalone)
-- [ ] Design patterns — Strategy, Factory, Observer, Singleton, Decorator…
-- [ ] Classic designs — Parking Lot, Elevator, BookMyShow, LRU Cache
-- [ ] Concurrency-ish thinking in JS — event loop, async, rate limiters
-- [ ] Clean module boundaries — when *not* to use classes
+- [ ] **OOP deep dive** — prototypes, classes, when _not_ to use either
+- [ ] **SOLID standalone** — each letter with JS/TS examples that stick
+- [x] **Factory** — Simple + Method + Abstract (Nestlé)
+- [ ] **More patterns** — Strategy, Observer, Singleton, Decorator…
+- [ ] **UML warmups** — association, aggregation, composition
+- [ ] **Case studies** — Parking Lot, Elevator, BookMyShow, LRU Cache, URL Shortener
+- [ ] **JS-flavored systems thinking** — event loop, async, rate limiters
 
-Each topic: **docs + basic code + improved code + runnable demo**.
+Every topic ships as: **docs + code + runnable demo**.
 
 ---
 
 ## Who this is for
 
-- Students preparing for **SDE interviews**
+- Students prepping for **SDE interviews** (and slightly panicking — valid)
 - Backend folks who "know JS" but never practiced LLD in it
-- Frontend engineers who want cleaner architecture beyond components
-- Anyone who's been told *"JS isn't real OOP"* and still wants strong design skills
+- Frontend engineers who want architecture beyond "another component"
+- Anyone who's heard _"JS isn't real OOP"_ and replied _"cool, still designing though"_
 
-No gatekeeping. If you can read TypeScript at a basic level, you're in.
+No gatekeeping. If you can skim TypeScript, you're in. Welcome.
 
 ---
 
-## Tip for presenters & study groups
+## Tip for teachers & study groups
 
-1. Show the **basic** diagram → run `demo:basic`
-2. Ask: *"What breaks when we add Video? Or save to a DB?"*
+1. Flash the **basic** diagram → run `demo:basic`
+2. Ask: _"What breaks when we add Video? Or save to a DB?"_
 3. Open the **improved** doc → walk SOLID one letter at a time
-4. Run `demo:improved` and point at File vs DB vs InMemory storage
+4. Run `demo:improved` → point at File vs DB vs InMemory
 
-Same story every lesson. Muscle memory for interviews.
+Same ritual every lesson. By week three, your brain auto-refactors.
 
 ---
 
-## License / contribution
+## Contribute
 
-Learning material — feel free to fork, teach, and extend. PRs that add a new LLD topic with the **basic + improved** format are very welcome.
+Learning material — fork it, teach it, meme it. PRs that add a new LLD topic in the **basic + improved** format get a virtual high five.
 
-Happy designing. May your classes stay small and your interfaces stay honest.
+Happy designing. May your classes stay small, your interfaces stay honest, and your `index.ts` never become a novel.

@@ -6,7 +6,11 @@
   "scripts": {
     "demo:basic": "tsx Design_GoogleDocs/basic.ts",
     "demo:improved": "tsx Design_GoogleDocs/improved.ts",
-    "demo": "npm run demo:basic && echo '\n---\n' && npm run demo:improved"
+    "demo:simple-factory": "tsx creational_pattern/factory_pattern/SimpleFactory/simpleFactory.ts",
+    "demo:factory-method": "tsx creational_pattern/factory_pattern/FactoryMethod/factoryMethod.ts",
+    "demo:abstract-factory": "tsx creational_pattern/factory_pattern/AbstractFactory/abstractFactory.ts",
+    "demo:factory": "npm run demo:simple-factory && echo '\n---\n' && npm run demo:factory-method && echo '\n---\n' && npm run demo:abstract-factory",
+    "demo": "npm run demo:basic && echo '\n---\n' && npm run demo:improved && echo '\n---\n' && npm run demo:factory"
   },
   "devDependencies": {
     "@types/node": "^22.20.3",

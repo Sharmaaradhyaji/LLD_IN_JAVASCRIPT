@@ -109,10 +109,13 @@ npm install
 npm run demo                 # everything
 npm run demo:basic           # Google Docs — naive
 npm run demo:improved        # Google Docs — SOLID
-npm run demo:simple-factory  # Nestlé Simple Factory
-npm run demo:factory-method  # Nestlé Factory Method
+npm run demo:simple-factory   # Nestlé Simple Factory
+npm run demo:factory-method   # Nestlé Factory Method
 npm run demo:abstract-factory # Nestlé Abstract Factory
-npm run demo:factory         # all three factory demos
+npm run demo:factory          # all three factory demos
+npm run demo:observer-pull    # Observer pull (Weather Station)
+npm run demo:observer-push    # Observer push (Weather Station)
+npm run demo:observer         # both observer demos
 ```
 
 ---
@@ -136,17 +139,31 @@ Classic warm-up: model a document, render it, save it. First we do it _wrong_ on
 
 Stop writing `new Maggi()` everywhere. Ask a factory. Same Nestlé story across all three flavors.
 
-| Resource                                                                                      | What you'll learn                         |
-| --------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| [Understanding_pattern.md](./creational_pattern/factory_pattern/Understanding_pattern.md)     | Definition + Simple vs Method vs Abstract |
-| [simpleFactory.md](./creational_pattern/factory_pattern/SimpleFactory/simpleFactory.md)       | One Nestlé plant, `createProduct(type)`   |
-| [simpleFactory.ts](./creational_pattern/factory_pattern/SimpleFactory/simpleFactory.ts)       | Maggi / KitKat / Milo                     |
-| [factoryMethod.md](./creational_pattern/factory_pattern/FactoryMethod/factoryMethod.md)       | India vs Swiss — one product at a time    |
-| [factoryMethod.ts](./creational_pattern/factory_pattern/FactoryMethod/factoryMethod.ts)       | Same type → different Maggi               |
-| [abstractFactory.md](./creational_pattern/factory_pattern/AbstractFactory/abstractFactory.md) | India vs Swiss — full combo pack          |
-| [abstractFactory.ts](./creational_pattern/factory_pattern/AbstractFactory/abstractFactory.ts) | Noodles + Chocolate + Drink together      |
+| Resource                                                                                       | What you'll learn                         |
+| ---------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| [pattern_understanding.md](./creational_patterns/factory_pattern/pattern_understanding.md)     | Definition + Simple vs Method vs Abstract |
+| [simpleFactory.md](./creational_patterns/factory_pattern/SimpleFactory/simpleFactory.md)       | One Nestlé plant, `createProduct(type)`   |
+| [simpleFactory.ts](./creational_patterns/factory_pattern/SimpleFactory/simpleFactory.ts)       | Maggi / KitKat / Milo                     |
+| [factoryMethod.md](./creational_patterns/factory_pattern/FactoryMethod/factoryMethod.md)       | India vs Swiss — one product at a time    |
+| [factoryMethod.ts](./creational_patterns/factory_pattern/FactoryMethod/factoryMethod.ts)       | Same type → different Maggi               |
+| [abstractFactory.md](./creational_patterns/factory_pattern/AbstractFactory/abstractFactory.md) | India vs Swiss — full combo pack          |
+| [abstractFactory.ts](./creational_patterns/factory_pattern/AbstractFactory/abstractFactory.ts) | Noodles + Chocolate + Drink together      |
 
 **One-liner:** Simple = one switch. Method = subclass picks one product. Abstract = subclass builds a matching family.
+
+### 3. Observer Pattern (Weather Station)
+
+One subject, many subscribers. Two delivery styles: **pull** (classic UML) and **push**.
+
+| Resource                                                                                    | What you'll learn                      |
+| ------------------------------------------------------------------------------------------- | -------------------------------------- |
+| [pattern_understanding.md](./behavioral_patterns/observer_pattern/pattern_understanding.md) | Definition, standard UML, Pull vs Push |
+| [pullObserver.md](./behavioral_patterns/observer_pattern/pull/pullObserver.md)              | `update()` then query the station      |
+| [pullObserver.ts](./behavioral_patterns/observer_pattern/pull/pullObserver.ts)              | Phone + TV displays (pull)             |
+| [pushObserver.md](./behavioral_patterns/observer_pattern/push/pushObserver.md)              | `update(data)` with weather payload    |
+| [pushObserver.ts](./behavioral_patterns/observer_pattern/push/pushObserver.ts)              | Phone + TV displays (push)             |
+
+**One-liner:** Pull = “something changed, go ask.” Push = “here’s the new data.”
 
 ---
 
@@ -157,7 +174,8 @@ Following the journey map above:
 - [ ] **OOP deep dive** — prototypes, classes, when _not_ to use either
 - [ ] **SOLID standalone** — each letter with JS/TS examples that stick
 - [x] **Factory** — Simple + Method + Abstract (Nestlé)
-- [ ] **More patterns** — Strategy, Observer, Singleton, Decorator…
+- [x] **Observer** — Pull + Push (Weather Station)
+- [ ] **More patterns** — Strategy, Singleton, Decorator…
 - [ ] **UML warmups** — association, aggregation, composition
 - [ ] **Case studies** — Parking Lot, Elevator, BookMyShow, LRU Cache, URL Shortener
 - [ ] **JS-flavored systems thinking** — event loop, async, rate limiters

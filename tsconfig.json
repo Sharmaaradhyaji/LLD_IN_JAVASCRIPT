@@ -10,5 +10,5 @@
     "outDir": "dist",
     "rootDir": "."
   },
-  "include": ["Design_GoogleDocs/**/*.ts"]
+  "include": ["Design_GoogleDocs/**/*.ts", "creational_patterns/**/*.ts"]
 }

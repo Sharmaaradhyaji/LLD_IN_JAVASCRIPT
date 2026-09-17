@@ -116,6 +116,12 @@ npm run demo:factory          # all three factory demos
 npm run demo:observer-pull    # Observer pull (Weather Station)
 npm run demo:observer-push    # Observer push (Weather Station)
 npm run demo:observer         # both observer demos
+npm run demo:solid            # all five SOLID demos
+npm run demo:srp              # Single Responsibility
+npm run demo:ocp              # Open/Closed
+npm run demo:lsp              # Liskov Substitution
+npm run demo:isp              # Interface Segregation
+npm run demo:dip              # Dependency Inversion
 ```
 
 ---
@@ -135,7 +141,22 @@ Classic warm-up: model a document, render it, save it. First we do it _wrong_ on
 
 **One-liner:** one class that does everything → Document → Elements → Renderer → Persistence.
 
-### 2. Factory Pattern (Nestlé)
+### 2. SOLID Principles
+
+Five rules that keep change cheap. Each letter has a **bad vs good** TypeScript demo.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [pattern_understanding.md](./SOLID/pattern_understanding.md) | What SOLID is + why it matters |
+| [SRP](./SOLID/SRP/srp.md) · [srp.ts](./SOLID/SRP/srp.ts) | One class, one reason to change (Invoice) |
+| [OCP](./SOLID/OCP/ocp.md) · [ocp.ts](./SOLID/OCP/ocp.ts) | Extend discounts without editing Checkout |
+| [LSP](./SOLID/LSP/lsp.md) · [lsp.ts](./SOLID/LSP/lsp.ts) | Don’t put `fly()` on penguins |
+| [ISP](./SOLID/ISP/isp.md) · [isp.ts](./SOLID/ISP/isp.ts) | Split fat Worker into Workable / Eatable |
+| [DIP](./SOLID/DIP/dip.md) · [dip.ts](./SOLID/DIP/dip.ts) | Inject PaymentGateway, not Stripe |
+
+**One-liner:** S split jobs · O add classes not ifs · L honour contracts · I small interfaces · D depend on abstractions.
+
+### 3. Factory Pattern (Nestlé)
 
 Stop writing `new Maggi()` everywhere. Ask a factory. Same Nestlé story across all three flavors.
 
@@ -151,7 +172,7 @@ Stop writing `new Maggi()` everywhere. Ask a factory. Same Nestlé story across 
 
 **One-liner:** Simple = one switch. Method = subclass picks one product. Abstract = subclass builds a matching family.
 
-### 3. Observer Pattern (Weather Station)
+### 4. Observer Pattern (Weather Station)
 
 One subject, many subscribers. Two delivery styles: **pull** (classic UML) and **push**.
 
@@ -172,7 +193,7 @@ One subject, many subscribers. Two delivery styles: **pull** (classic UML) and *
 Following the journey map above:
 
 - [ ] **OOP deep dive** — prototypes, classes, when _not_ to use either
-- [ ] **SOLID standalone** — each letter with JS/TS examples that stick
+- [x] **SOLID** — S · O · L · I · D with bad/good demos
 - [x] **Factory** — Simple + Method + Abstract (Nestlé)
 - [x] **Observer** — Pull + Push (Weather Station)
 - [ ] **More patterns** — Strategy, Singleton, Decorator…

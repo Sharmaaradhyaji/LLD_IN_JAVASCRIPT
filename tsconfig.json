@@ -13,6 +13,7 @@
   "include": [
     "Design_GoogleDocs/**/*.ts",
     "creational_patterns/**/*.ts",
-    "behavioral_patterns/**/*.ts"
+    "behavioral_patterns/**/*.ts",
+    "SOLID/**/*.ts"
   ]
 }

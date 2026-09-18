@@ -19,7 +19,8 @@
     "demo:isp": "tsx SOLID/ISP/isp.ts",
     "demo:dip": "tsx SOLID/DIP/dip.ts",
     "demo:solid": "npm run demo:srp && echo '\\n---\\n' && npm run demo:ocp && echo '\\n---\\n' && npm run demo:lsp && echo '\\n---\\n' && npm run demo:isp && echo '\\n---\\n' && npm run demo:dip",
-    "demo": "npm run demo:basic && echo '\\n---\\n' && npm run demo:improved && echo '\\n---\\n' && npm run demo:factory && echo '\\n---\\n' && npm run demo:observer && echo '\\n---\\n' && npm run demo:solid"
+    "demo:decorator": "tsx structural_pattern/decorator_pattern/decorator.ts",
+    "demo": "npm run demo:basic && echo '\\n---\\n' && npm run demo:improved && echo '\\n---\\n' && npm run demo:factory && echo '\\n---\\n' && npm run demo:observer && echo '\\n---\\n' && npm run demo:solid && echo '\\n---\\n' && npm run demo:decorator"
   },
   "devDependencies": {
     "@types/node": "^22.20.3",

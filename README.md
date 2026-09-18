@@ -122,6 +122,7 @@ npm run demo:ocp              # Open/Closed
 npm run demo:lsp              # Liskov Substitution
 npm run demo:isp              # Interface Segregation
 npm run demo:dip              # Dependency Inversion
+npm run demo:decorator        # Decorator — coffee toppings
 ```
 
 ---
@@ -186,6 +187,18 @@ One subject, many subscribers. Two delivery styles: **pull** (classic UML) and *
 
 **One-liner:** Pull = “something changed, go ask.” Push = “here’s the new data.”
 
+### 5. Decorator Pattern (Coffee Shop)
+
+Add toppings by wrapping — no subclass for every combo.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [pattern_understanding.md](./structural_pattern/decorator_pattern/pattern_understanding.md) | Definition, UML, when to use |
+| [decorator.md](./structural_pattern/decorator_pattern/decorator.md) | Coffee + Milk / Sugar / Whip walkthrough |
+| [decorator.ts](./structural_pattern/decorator_pattern/decorator.ts) | Stack wrappers at runtime |
+
+**One-liner:** Wrap same interface → stack behaviour (`Milk(Sugar(Coffee))`) instead of class explosion.
+
 ---
 
 ## Roadmap (the adventure continues)
@@ -196,7 +209,8 @@ Following the journey map above:
 - [x] **SOLID** — S · O · L · I · D with bad/good demos
 - [x] **Factory** — Simple + Method + Abstract (Nestlé)
 - [x] **Observer** — Pull + Push (Weather Station)
-- [ ] **More patterns** — Strategy, Singleton, Decorator…
+- [x] **Decorator** — Coffee toppings (structural)
+- [ ] **More patterns** — Strategy, Singleton, Adapter…
 - [ ] **UML warmups** — association, aggregation, composition
 - [ ] **Case studies** — Parking Lot, Elevator, BookMyShow, LRU Cache, URL Shortener
 - [ ] **JS-flavored systems thinking** — event loop, async, rate limiters

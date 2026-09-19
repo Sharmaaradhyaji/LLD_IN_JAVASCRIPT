@@ -20,7 +20,9 @@
     "demo:dip": "tsx SOLID/DIP/dip.ts",
     "demo:solid": "npm run demo:srp && echo '\\n---\\n' && npm run demo:ocp && echo '\\n---\\n' && npm run demo:lsp && echo '\\n---\\n' && npm run demo:isp && echo '\\n---\\n' && npm run demo:dip",
     "demo:decorator": "tsx structural_pattern/decorator_pattern/decorator.ts",
-    "demo": "npm run demo:basic && echo '\\n---\\n' && npm run demo:improved && echo '\\n---\\n' && npm run demo:factory && echo '\\n---\\n' && npm run demo:observer && echo '\\n---\\n' && npm run demo:solid && echo '\\n---\\n' && npm run demo:decorator"
+    "demo:singleton": "tsx creational_patterns/singleton_pattern/singleton.ts",
+    "demo:singleton-http": "tsx creational_patterns/singleton_pattern/productionHttpClient.ts",
+    "demo": "npm run demo:basic && echo '\\n---\\n' && npm run demo:improved && echo '\\n---\\n' && npm run demo:factory && echo '\\n---\\n' && npm run demo:observer && echo '\\n---\\n' && npm run demo:solid && echo '\\n---\\n' && npm run demo:decorator && echo '\\n---\\n' && npm run demo:singleton && echo '\\n---\\n' && npm run demo:singleton-http"
   },
   "devDependencies": {
     "@types/node": "^22.20.3",

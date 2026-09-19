@@ -123,6 +123,8 @@ npm run demo:lsp              # Liskov Substitution
 npm run demo:isp              # Interface Segregation
 npm run demo:dip              # Dependency Inversion
 npm run demo:decorator        # Decorator — coffee toppings
+npm run demo:singleton        # Singleton — classic Logger
+npm run demo:singleton-http   # Singleton — production HttpClient
 ```
 
 ---
@@ -199,6 +201,18 @@ Add toppings by wrapping — no subclass for every combo.
 
 **One-liner:** Wrap same interface → stack behaviour (`Milk(Sugar(Coffee))`) instead of class explosion.
 
+### 6. Singleton Pattern (Logger + Production HttpClient)
+
+One instance, global access. Textbook `getInstance()` — plus the module-export style used in real apps for `HttpClient`.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [pattern_understanding.md](./creational_patterns/singleton_pattern/pattern_understanding.md) | Definition, classic vs module style |
+| [singleton.md](./creational_patterns/singleton_pattern/singleton.md) · [singleton.ts](./creational_patterns/singleton_pattern/singleton.ts) | Logger with `getInstance()` |
+| [productionHttpClient.md](./creational_patterns/singleton_pattern/productionHttpClient.md) · [productionHttpClient.ts](./creational_patterns/singleton_pattern/productionHttpClient.ts) | `export const httpClient = new HttpClient()` + shared token refresh |
+
+**One-liner:** Classic = `getInstance()`. Production JS = module export. HttpClient needs one instance so refresh queues stay shared.
+
 ---
 
 ## Roadmap (the adventure continues)
@@ -208,9 +222,10 @@ Following the journey map above:
 - [ ] **OOP deep dive** — prototypes, classes, when _not_ to use either
 - [x] **SOLID** — S · O · L · I · D with bad/good demos
 - [x] **Factory** — Simple + Method + Abstract (Nestlé)
+- [x] **Singleton** — Logger + production HttpClient
 - [x] **Observer** — Pull + Push (Weather Station)
 - [x] **Decorator** — Coffee toppings (structural)
-- [ ] **More patterns** — Strategy, Singleton, Adapter…
+- [ ] **More patterns** — Strategy, Adapter…
 - [ ] **UML warmups** — association, aggregation, composition
 - [ ] **Case studies** — Parking Lot, Elevator, BookMyShow, LRU Cache, URL Shortener
 - [ ] **JS-flavored systems thinking** — event loop, async, rate limiters

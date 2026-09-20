@@ -6,6 +6,7 @@
   "scripts": {
     "demo:basic": "tsx Design_GoogleDocs/basic.ts",
     "demo:improved": "tsx Design_GoogleDocs/improved.ts",
+    "demo:tomato": "tsx projects/Design_Zomato/code/demo.ts",
     "demo:simple-factory": "tsx creational_patterns/factory_pattern/SimpleFactory/simpleFactory.ts",
     "demo:factory-method": "tsx creational_patterns/factory_pattern/FactoryMethod/factoryMethod.ts",
     "demo:abstract-factory": "tsx creational_patterns/factory_pattern/AbstractFactory/abstractFactory.ts",

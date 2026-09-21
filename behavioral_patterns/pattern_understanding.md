@@ -17,3 +17,17 @@ When one object’s state changes, notify everyone who subscribed.
 ```bash
 npm run demo:observer
 ```
+
+### Strategy
+
+Swap algorithms (Card / UPI / Wallet) without rewriting checkout — kills giant if/else and keeps DRY.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [strategy_pattern/pattern_understanding.md](./strategy_pattern/pattern_understanding.md) | Problem, DRY, UML |
+| [strategy.md](./strategy_pattern/strategy.md) | Payment checkout walkthrough |
+| [strategy.ts](./strategy_pattern/strategy.ts) | Bad if/else vs Strategy |
+
+```bash
+npm run demo:strategy
+```

@@ -125,6 +125,7 @@ npm run demo:dip              # Dependency Inversion
 npm run demo:decorator        # Decorator — coffee toppings
 npm run demo:singleton        # Singleton — classic Logger
 npm run demo:singleton-http   # Singleton — production HttpClient
+npm run demo:strategy         # Strategy — payment checkout
 ```
 
 ---
@@ -213,6 +214,18 @@ One instance, global access. Textbook `getInstance()` — plus the module-export
 
 **One-liner:** Classic = `getInstance()`. Production JS = module export. HttpClient needs one instance so refresh queues stay shared.
 
+### 7. Strategy Pattern (Payment Checkout)
+
+Swap Card / UPI / Wallet without rewriting checkout — no giant if/else, better DRY.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [pattern_understanding.md](./behavioral_patterns/strategy_pattern/pattern_understanding.md) | Problem, DRY, UML |
+| [strategy.md](./behavioral_patterns/strategy_pattern/strategy.md) | Checkout + payment strategies |
+| [strategy.ts](./behavioral_patterns/strategy_pattern/strategy.ts) | Bad if/else vs Strategy |
+
+**One-liner:** Family of algorithms behind one interface; context delegates — Open/Closed + DRY.
+
 ---
 
 ## Roadmap (the adventure continues)
@@ -225,7 +238,8 @@ Following the journey map above:
 - [x] **Singleton** — Logger + production HttpClient
 - [x] **Observer** — Pull + Push (Weather Station)
 - [x] **Decorator** — Coffee toppings (structural)
-- [ ] **More patterns** — Strategy, Adapter…
+- [x] **Strategy** — Payment algorithms (behavioral)
+- [ ] **More patterns** — Adapter…
 - [ ] **UML warmups** — association, aggregation, composition
 - [ ] **Case studies** — Parking Lot, Elevator, BookMyShow, LRU Cache, URL Shortener
 - [ ] **JS-flavored systems thinking** — event loop, async, rate limiters

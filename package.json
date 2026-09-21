@@ -22,7 +22,8 @@
     "demo:decorator": "tsx structural_pattern/decorator_pattern/decorator.ts",
     "demo:singleton": "tsx creational_patterns/singleton_pattern/singleton.ts",
     "demo:singleton-http": "tsx creational_patterns/singleton_pattern/productionHttpClient.ts",
-    "demo": "npm run demo:basic && echo '\\n---\\n' && npm run demo:improved && echo '\\n---\\n' && npm run demo:factory && echo '\\n---\\n' && npm run demo:observer && echo '\\n---\\n' && npm run demo:solid && echo '\\n---\\n' && npm run demo:decorator && echo '\\n---\\n' && npm run demo:singleton && echo '\\n---\\n' && npm run demo:singleton-http"
+    "demo:strategy": "tsx behavioral_patterns/strategy_pattern/strategy.ts",
+    "demo": "npm run demo:basic && echo '\\n---\\n' && npm run demo:improved && echo '\\n---\\n' && npm run demo:factory && echo '\\n---\\n' && npm run demo:observer && echo '\\n---\\n' && npm run demo:solid && echo '\\n---\\n' && npm run demo:decorator && echo '\\n---\\n' && npm run demo:singleton && echo '\\n---\\n' && npm run demo:singleton-http && echo '\\n---\\n' && npm run demo:strategy"
   },
   "devDependencies": {
     "@types/node": "^22.20.3",

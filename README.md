@@ -126,6 +126,7 @@ npm run demo:decorator        # Decorator — coffee toppings
 npm run demo:singleton        # Singleton — classic Logger
 npm run demo:singleton-http   # Singleton — production HttpClient
 npm run demo:strategy         # Strategy — payment checkout
+npm run demo:notification     # Case study — Notification System
 ```
 
 ---
@@ -226,6 +227,17 @@ Swap Card / UPI / Wallet without rewriting checkout — no giant if/else, better
 
 **One-liner:** Family of algorithms behind one interface; context delegates — Open/Closed + DRY.
 
+### 8. Case Study — Notification System
+
+Combines Singleton + Decorator + Observer + Strategy into one interview-ready design.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [design_docs.md](./Design_NotificationSystem/design_docs.md) | Mermaid UML + pattern walkthrough + data flow |
+| [code.ts](./Design_NotificationSystem/code.ts) | Runnable: decorate content → observe → Email/SMS/PopUp |
+
+**One-liner:** Service publishes → observers pull → strategies deliver; decorators shape the message.
+
 ---
 
 ## Roadmap (the adventure continues)
@@ -241,7 +253,8 @@ Following the journey map above:
 - [x] **Strategy** — Payment algorithms (behavioral)
 - [ ] **More patterns** — Adapter…
 - [ ] **UML warmups** — association, aggregation, composition
-- [ ] **Case studies** — Parking Lot, Elevator, BookMyShow, LRU Cache, URL Shortener
+- [x] **Case study** — Notification System (Singleton + Decorator + Observer + Strategy)
+- [ ] **More case studies** — Parking Lot, Elevator, BookMyShow, LRU Cache, URL Shortener
 - [ ] **JS-flavored systems thinking** — event loop, async, rate limiters
 
 Every topic ships as: **docs + code + runnable demo**.

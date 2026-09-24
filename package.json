@@ -23,8 +23,9 @@
     "demo:singleton": "tsx creational_patterns/singleton_pattern/singleton.ts",
     "demo:singleton-http": "tsx creational_patterns/singleton_pattern/productionHttpClient.ts",
     "demo:strategy": "tsx behavioral_patterns/strategy_pattern/strategy.ts",
+    "demo:command": "tsx behavioral_patterns/command_pattern/command.ts",
     "demo:notification": "tsx Design_NotificationSystem/code.ts",
-    "demo": "npm run demo:basic && echo '\\n---\\n' && npm run demo:improved && echo '\\n---\\n' && npm run demo:factory && echo '\\n---\\n' && npm run demo:observer && echo '\\n---\\n' && npm run demo:solid && echo '\\n---\\n' && npm run demo:decorator && echo '\\n---\\n' && npm run demo:singleton && echo '\\n---\\n' && npm run demo:singleton-http && echo '\\n---\\n' && npm run demo:strategy && echo '\\n---\\n' && npm run demo:notification"
+    "demo": "npm run demo:basic && echo '\\n---\\n' && npm run demo:improved && echo '\\n---\\n' && npm run demo:factory && echo '\\n---\\n' && npm run demo:observer && echo '\\n---\\n' && npm run demo:solid && echo '\\n---\\n' && npm run demo:decorator && echo '\\n---\\n' && npm run demo:singleton && echo '\\n---\\n' && npm run demo:singleton-http && echo '\\n---\\n' && npm run demo:strategy && echo '\\n---\\n' && npm run demo:command && echo '\\n---\\n' && npm run demo:notification"
   },
   "devDependencies": {
     "@types/node": "^22.20.3",

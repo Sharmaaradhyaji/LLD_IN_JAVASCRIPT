@@ -31,3 +31,17 @@ Swap algorithms (Card / UPI / Wallet) without rewriting checkout — kills giant
 ```bash
 npm run demo:strategy
 ```
+
+### Command
+
+Turn a request into an object — queue it, undo it, or bundle it into a macro. Smart Home Remote is the classic demo.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [command_pattern/pattern_understanding.md](./command_pattern/pattern_understanding.md) | Definition, UML, Command vs Strategy |
+| [command.md](./command_pattern/command.md) | Remote + Light / Fan + undo + macro |
+| [command.ts](./command_pattern/command.ts) | Bad if/else remote vs Command |
+
+```bash
+npm run demo:command
+```

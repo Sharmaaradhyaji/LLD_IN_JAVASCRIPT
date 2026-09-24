@@ -126,6 +126,7 @@ npm run demo:decorator        # Decorator — coffee toppings
 npm run demo:singleton        # Singleton — classic Logger
 npm run demo:singleton-http   # Singleton — production HttpClient
 npm run demo:strategy         # Strategy — payment checkout
+npm run demo:command          # Command — smart home remote
 npm run demo:notification     # Case study — Notification System
 ```
 
@@ -227,7 +228,19 @@ Swap Card / UPI / Wallet without rewriting checkout — no giant if/else, better
 
 **One-liner:** Family of algorithms behind one interface; context delegates — Open/Closed + DRY.
 
-### 8. Case Study — Notification System
+### 8. Command Pattern (Smart Home Remote)
+
+Turn a request into an object — execute, undo, and macro without the remote knowing devices.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [pattern_understanding.md](./behavioral_patterns/command_pattern/pattern_understanding.md) | Definition, UML, Command vs Strategy |
+| [command.md](./behavioral_patterns/command_pattern/command.md) | Remote slots + Light / Fan + undo |
+| [command.ts](./behavioral_patterns/command_pattern/command.ts) | Bad if/else remote vs Command |
+
+**One-liner:** Encapsulate a request as `execute()` / `undo()` — invoker queues and undoes without knowing receivers.
+
+### 9. Case Study — Notification System
 
 Combines Singleton + Decorator + Observer + Strategy into one interview-ready design.
 
@@ -251,6 +264,7 @@ Following the journey map above:
 - [x] **Observer** — Pull + Push (Weather Station)
 - [x] **Decorator** — Coffee toppings (structural)
 - [x] **Strategy** — Payment algorithms (behavioral)
+- [x] **Command** — Smart Home Remote + undo + macro
 - [ ] **More patterns** — Adapter…
 - [ ] **UML warmups** — association, aggregation, composition
 - [x] **Case study** — Notification System (Singleton + Decorator + Observer + Strategy)

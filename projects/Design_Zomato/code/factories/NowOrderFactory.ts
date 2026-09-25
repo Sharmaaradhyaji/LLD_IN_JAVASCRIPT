@@ -4,7 +4,7 @@
  * Pattern: Factory (concrete)
  *
  * Teaching note:
- *   Tomato injects this factory when the user wants food "now".
+ *   Zomato injects this factory when the user wants food "now".
  *   Delivery vs Pickup is still chosen via the `type` argument.
  */
 import { Cart } from "../models/Cart";

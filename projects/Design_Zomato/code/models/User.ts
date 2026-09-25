@@ -2,7 +2,7 @@
  * User — customer who owns a Cart.
  *
  * Teaching note:
- *   User is a model. Tomato (orchestrator) drives what the user does.
+ *   User is a model. Zomato (orchestrator) drives what the user does.
  */
 import { Cart } from "./Cart";
 

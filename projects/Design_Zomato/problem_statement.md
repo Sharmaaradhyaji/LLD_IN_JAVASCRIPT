@@ -1,4 +1,4 @@
-# Design a Food Delivery App → (Tomato)
+# Design a Food Delivery App → (Zomato)
 
 ## Functional Requirements
 
@@ -13,7 +13,7 @@
 
 ## Approach
 
-- Bottom-up design: start from core models, then managers/factories/strategies, then the orchestration class (`Tomato`).
+- Bottom-up design: start from core models, then managers/factories/strategies, then the orchestration class (`Zomato`).
 - Payment uses the **Strategy** pattern (thin classes that call a 3rd-party gateway).
 - `RestaurantManager` / `OrderManager` use **Singleton**.
 - Orders are created via **Factory** (Now / Schedule → Delivery / Pickup).
@@ -29,4 +29,4 @@ User → Restaurants (by location) → Menu → Cart / Order
 ## Docs & Code
 
 - Design walkthrough + UML: [`improved-design_docs.md`](./improved-design_docs.md)
-- Runnable TypeScript: [`code/`](./code/) — `npm run demo:tomato`
+- Runnable TypeScript: [`code/`](./code/) — `npm run demo:zomato`

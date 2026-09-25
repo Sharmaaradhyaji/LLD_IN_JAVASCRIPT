@@ -1,9 +1,9 @@
 /**
- * Tomato — orchestration / facade for the food-delivery app.
+ * Zomato — orchestration / facade for the food-delivery app.
  * ==========================================================
  *
  * Teaching note:
- *   Tomato knows the USER JOURNEY (search → cart → checkout).
+ *   Zomato knows the USER JOURNEY (search → cart → checkout).
  *   It does NOT own restaurant storage (Singleton managers),
  *   does NOT construct Delivery/Pickup itself (Factory),
  *   and does NOT hard-code UPI vs card (Strategy).
@@ -23,7 +23,7 @@ import { User } from "./models/User";
 import { NotificationService } from "./services/NotificationService";
 import { IPaymentStrategy } from "./strategies/IPaymentStrategy";
 
-export class Tomato {
+export class Zomato {
   private readonly restaurantManager = RestaurantManager.getInstance();
   private readonly orderManager = OrderManager.getInstance();
   private readonly notificationService = new NotificationService();
@@ -37,14 +37,14 @@ export class Tomato {
   selectRestaurant(user: User, restaurant: Restaurant): void {
     user.getCart().setRestaurant(restaurant);
     console.log(
-      `[Tomato] ${user.getName()} selected ${restaurant.toString()}`,
+      `[Zomato] ${user.getName()} selected ${restaurant.toString()}`,
     );
   }
 
   /** Functional requirement: add items to cart. */
   addToCart(user: User, item: MenuItem): void {
     user.getCart().addItem(item);
-    console.log(`[Tomato] Added ${item.toString()} to cart`);
+    console.log(`[Zomato] Added ${item.toString()} to cart`);
   }
 
   /**
@@ -85,7 +85,7 @@ export class Tomato {
     cart.clear();
 
     console.log(
-      `[Tomato] Checkout complete → Order #${order.getId()} (${order.getType()})`,
+      `[Zomato] Checkout complete → Order #${order.getId()} (${order.getType()})`,
     );
     return order;
   }

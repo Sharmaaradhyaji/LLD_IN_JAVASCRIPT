@@ -1,7 +1,7 @@
 /**
- * Tomato demo — walk the full flow while calling out patterns.
+ * Zomato demo — walk the full flow while calling out patterns.
  *
- * Run: npm run demo:tomato
+ * Run: npm run demo:zomato
  *
  * Talk track while this runs:
  *   1. Seed restaurants into the Singleton RestaurantManager
@@ -19,7 +19,7 @@ import { Restaurant } from "./models/Restaurant";
 import { User } from "./models/User";
 import { CreditCardPayment } from "./strategies/CreditCardPayment";
 import { UpiPayment } from "./strategies/UpiPayment";
-import { Tomato } from "./Tomato";
+import { Zomato } from "./Zomato";
 
 function seedRestaurants(): void {
   const manager = RestaurantManager.getInstance();
@@ -45,10 +45,10 @@ function main(): void {
   RestaurantManager.resetInstance();
   OrderManager.resetInstance();
 
-  console.log("=== Tomato Food Delivery — LLD Demo ===\n");
+  console.log("=== Zomato Food Delivery — LLD Demo ===\n");
 
   seedRestaurants();
-  const app = new Tomato();
+  const app = new Zomato();
   const aaradhya = new User(101, "Aaradhya", "Connaught Place, Delhi");
 
   // --- Singleton: search uses the shared RestaurantManager ---

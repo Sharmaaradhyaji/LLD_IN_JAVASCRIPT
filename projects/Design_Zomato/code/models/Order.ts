@@ -3,7 +3,7 @@
  *
  * Teaching note:
  *   - Order holds an IPaymentStrategy (Strategy pattern).
- *   - Factories create Delivery vs Pickup so Tomato never `new`s these directly.
+ *   - Factories create Delivery vs Pickup so Zomato never `new`s these directly.
  *   - processPayment() delegates to the strategy — Order does not know UPI vs card.
  */
 import { Cart } from "./Cart";

@@ -17,3 +17,17 @@ Add behaviour to an object **dynamically** by wrapping it — without changing i
 ```bash
 npm run demo:decorator
 ```
+
+### Adapter
+
+Make an incompatible class fit the interface your code expects — without changing either side. Payment gateway integration is the real-life demo.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [adapter_pattern/pattern_understanding.md](./adapter_pattern/pattern_understanding.md) | Definition, UML, Adapter vs Decorator vs Facade |
+| [adapter.md](./adapter_pattern/adapter.md) | Stripe-style + Razorpay-style SDKs behind one `PaymentProcessor` |
+| [adapter.ts](./adapter_pattern/adapter.ts) | Bad vendor branching vs one adapter per gateway |
+
+```bash
+npm run demo:adapter
+```

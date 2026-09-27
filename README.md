@@ -123,6 +123,7 @@ npm run demo:lsp              # Liskov Substitution
 npm run demo:isp              # Interface Segregation
 npm run demo:dip              # Dependency Inversion
 npm run demo:decorator        # Decorator — coffee toppings
+npm run demo:adapter          # Adapter — payment gateway integration
 npm run demo:singleton        # Singleton — classic Logger
 npm run demo:singleton-http   # Singleton — production HttpClient
 npm run demo:strategy         # Strategy — payment checkout
@@ -198,11 +199,23 @@ Add toppings by wrapping — no subclass for every combo.
 
 | Resource | What you'll learn |
 |----------|-------------------|
-| [pattern_understanding.md](./structural_pattern/decorator_pattern/pattern_understanding.md) | Definition, UML, when to use |
-| [decorator.md](./structural_pattern/decorator_pattern/decorator.md) | Coffee + Milk / Sugar / Whip walkthrough |
-| [decorator.ts](./structural_pattern/decorator_pattern/decorator.ts) | Stack wrappers at runtime |
+| [pattern_understanding.md](./structural_patterns/decorator_pattern/pattern_understanding.md) | Definition, UML, when to use |
+| [decorator.md](./structural_patterns/decorator_pattern/decorator.md) | Coffee + Milk / Sugar / Whip walkthrough |
+| [decorator.ts](./structural_patterns/decorator_pattern/decorator.ts) | Stack wrappers at runtime |
 
 **One-liner:** Wrap same interface → stack behaviour (`Milk(Sugar(Coffee))`) instead of class explosion.
+
+### 5b. Adapter Pattern (Payment Gateway Integration)
+
+Make vendor SDKs with the wrong shape fit your app's interface — without editing either side.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [pattern_understanding.md](./structural_patterns/adapter_pattern/pattern_understanding.md) | Definition, UML, Adapter vs Decorator vs Facade |
+| [adapter.md](./structural_patterns/adapter_pattern/adapter.md) | Stripe-style + Razorpay-style SDKs behind one `PaymentProcessor` |
+| [adapter.ts](./structural_patterns/adapter_pattern/adapter.ts) | Bad vendor branching vs one adapter per gateway |
+
+**One-liner:** Adapter translates an incompatible API into the interface your code already expects.
 
 ### 6. Singleton Pattern (Logger + Production HttpClient)
 
@@ -265,7 +278,8 @@ Following the journey map above:
 - [x] **Decorator** — Coffee toppings (structural)
 - [x] **Strategy** — Payment algorithms (behavioral)
 - [x] **Command** — Smart Home Remote + undo + macro
-- [ ] **More patterns** — Adapter…
+- [x] **Adapter** — Payment gateway integration (structural)
+- [ ] **More patterns** — Facade, Composite, Proxy…
 - [ ] **UML warmups** — association, aggregation, composition
 - [x] **Case study** — Notification System (Singleton + Decorator + Observer + Strategy)
 - [ ] **More case studies** — Parking Lot, Elevator, BookMyShow, LRU Cache, URL Shortener

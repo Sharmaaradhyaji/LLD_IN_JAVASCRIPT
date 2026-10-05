@@ -129,6 +129,7 @@ npm run demo:singleton-http   # Singleton — production HttpClient
 npm run demo:strategy         # Strategy — payment checkout
 npm run demo:command          # Command — smart home remote
 npm run demo:notification     # Case study — Notification System
+npm run demo:music-player     # Case study — Music Player App
 ```
 
 ---
@@ -264,6 +265,18 @@ Combines Singleton + Decorator + Observer + Strategy into one interview-ready de
 
 **One-liner:** Service publishes → observers pull → strategies deliver; decorators shape the message.
 
+### 10. Case Study — Music Player App
+
+Play songs and playlists in different orders on different output devices. Combines Singleton + Factory + Strategy + Adapter + Facade.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [problem_statement.md](./projects/Design_MusicPlayerApp/problem_statement.md) | Functional + non-functional requirements |
+| [design_docs.md](./projects/Design_MusicPlayerApp/design_docs.md) | Bottom-up Mermaid UML + why each pattern, and where |
+| [demo.ts](./projects/Design_MusicPlayerApp/demo.ts) | Runnable: devices, sequential / shuffle / custom queue |
+
+**One-liner:** Adapters hide vendor device APIs, strategies pick play order, and a facade wraps it all in simple calls.
+
 ---
 
 ## Roadmap (the adventure continues)
@@ -282,6 +295,7 @@ Following the journey map above:
 - [ ] **More patterns** — Facade, Composite, Proxy…
 - [ ] **UML warmups** — association, aggregation, composition
 - [x] **Case study** — Notification System (Singleton + Decorator + Observer + Strategy)
+- [x] **Case study** — Music Player App (Singleton + Factory + Strategy + Adapter + Facade)
 - [ ] **More case studies** — Parking Lot, Elevator, BookMyShow, LRU Cache, URL Shortener
 - [ ] **JS-flavored systems thinking** — event loop, async, rate limiters
 

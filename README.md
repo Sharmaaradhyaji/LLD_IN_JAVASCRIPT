@@ -124,6 +124,7 @@ npm run demo:isp              # Interface Segregation
 npm run demo:dip              # Dependency Inversion
 npm run demo:decorator        # Decorator — coffee toppings
 npm run demo:adapter          # Adapter — payment gateway integration
+npm run demo:composite        # Composite — file explorer tree
 npm run demo:singleton        # Singleton — classic Logger
 npm run demo:singleton-http   # Singleton — production HttpClient
 npm run demo:strategy         # Strategy — payment checkout
@@ -218,6 +219,18 @@ Make vendor SDKs with the wrong shape fit your app's interface — without editi
 
 **One-liner:** Adapter translates an incompatible API into the interface your code already expects.
 
+### 5c. Composite Pattern (File Explorer)
+
+A use-case-specific pattern: only for tree-shaped data, where one call should work on a single item or a whole group.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [pattern_understanding.md](./structural_patterns/composite_pattern/pattern_understanding.md) | Problem, issues without it, UML, real use cases, when not to use |
+| [composite.md](./structural_patterns/composite_pattern/composite.md) | File / Folder / Shortcut walkthrough |
+| [composite.ts](./structural_patterns/composite_pattern/composite.ts) | Bad type-checking traversal vs Composite |
+
+**One-liner:** Leaf and container share one interface, so `item.getSizeKb()` works on a file or an entire folder tree.
+
 ### 6. Singleton Pattern (Logger + Production HttpClient)
 
 One instance, global access. Textbook `getInstance()` — plus the module-export style used in real apps for `HttpClient`.
@@ -292,7 +305,8 @@ Following the journey map above:
 - [x] **Strategy** — Payment algorithms (behavioral)
 - [x] **Command** — Smart Home Remote + undo + macro
 - [x] **Adapter** — Payment gateway integration (structural)
-- [ ] **More patterns** — Facade, Composite, Proxy…
+- [x] **Composite** — File explorer tree (structural)
+- [ ] **More patterns** — Proxy, Iterator, State…
 - [ ] **UML warmups** — association, aggregation, composition
 - [x] **Case study** — Notification System (Singleton + Decorator + Observer + Strategy)
 - [x] **Case study** — Music Player App (Singleton + Factory + Strategy + Adapter + Facade)

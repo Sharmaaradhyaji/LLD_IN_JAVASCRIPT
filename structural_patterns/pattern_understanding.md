@@ -31,3 +31,17 @@ Make an incompatible class fit the interface your code expects — without chang
 ```bash
 npm run demo:adapter
 ```
+
+### Composite
+
+Treat a single item and a group of items the same way — only for tree-shaped data. A file explorer that sizes files and folders is the demo.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [composite_pattern/pattern_understanding.md](./composite_pattern/pattern_understanding.md) | Problem, issues without it, UML, real use cases, when not to use |
+| [composite.md](./composite_pattern/composite.md) | File / Folder / Shortcut walkthrough |
+| [composite.ts](./composite_pattern/composite.ts) | Bad type-checking traversal vs Composite |
+
+```bash
+npm run demo:composite
+```

@@ -45,3 +45,17 @@ Turn a request into an object — queue it, undo it, or bundle it into a macro. 
 ```bash
 npm run demo:command
 ```
+
+### Template Method
+
+Write a fixed sequence of steps once and let subclasses fill in only the steps that differ — a use-case-specific pattern for "same recipe, different details".
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [template_pattern/pattern_understanding.md](./template_pattern/pattern_understanding.md) | Problem, issues without it, UML, hooks, real use cases, Template vs Strategy |
+| [template.md](./template_pattern/template.md) | CSV / JSON / XML employee import walkthrough |
+| [template.ts](./template_pattern/template.ts) | Copy-pasted importers vs one shared pipeline |
+
+```bash
+npm run demo:template
+```

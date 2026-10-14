@@ -129,6 +129,7 @@ npm run demo:singleton        # Singleton — classic Logger
 npm run demo:singleton-http   # Singleton — production HttpClient
 npm run demo:strategy         # Strategy — payment checkout
 npm run demo:command          # Command — smart home remote
+npm run demo:template         # Template Method — employee data import
 npm run demo:notification     # Case study — Notification System
 npm run demo:music-player     # Case study — Music Player App
 ```
@@ -267,6 +268,18 @@ Turn a request into an object — execute, undo, and macro without the remote kn
 
 **One-liner:** Encapsulate a request as `execute()` / `undo()` — invoker queues and undoes without knowing receivers.
 
+### 8b. Template Method Pattern (Employee Data Import)
+
+A use-case-specific pattern: only when several variants follow the same fixed steps and differ in just a few of them.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [pattern_understanding.md](./behavioral_patterns/template_pattern/pattern_understanding.md) | Problem, issues without it, UML, hooks, real use cases, Template vs Strategy |
+| [template.md](./behavioral_patterns/template_pattern/template.md) | CSV / JSON / XML importers sharing one pipeline |
+| [template.ts](./behavioral_patterns/template_pattern/template.ts) | Copy-pasted importers vs Template Method |
+
+**One-liner:** The base class owns the recipe; subclasses only fill in the steps that differ.
+
 ### 9. Case Study — Notification System
 
 Combines Singleton + Decorator + Observer + Strategy into one interview-ready design.
@@ -306,6 +319,7 @@ Following the journey map above:
 - [x] **Command** — Smart Home Remote + undo + macro
 - [x] **Adapter** — Payment gateway integration (structural)
 - [x] **Composite** — File explorer tree (structural)
+- [x] **Template Method** — Employee data import (behavioral)
 - [ ] **More patterns** — Proxy, Iterator, State…
 - [ ] **UML warmups** — association, aggregation, composition
 - [x] **Case study** — Notification System (Singleton + Decorator + Observer + Strategy)

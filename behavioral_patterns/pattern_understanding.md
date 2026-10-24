@@ -59,3 +59,17 @@ Write a fixed sequence of steps once and let subclasses fill in only the steps t
 ```bash
 npm run demo:template
 ```
+
+### Chain of Responsibility
+
+Pass a request along a line of handlers. Each one handles it or forwards it. Expense approval is the demo: the submitter never learns the limits.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [chain_of_responsibility_pattern/pattern_understanding.md](./chain_of_responsibility_pattern/pattern_understanding.md) | Problem, issues without it, UML, where the shape shows up, when not to use |
+| [chain.md](./chain_of_responsibility_pattern/chain.md) | Manager → Director → VP, then a CFO linked in |
+| [chain.ts](./chain_of_responsibility_pattern/chain.ts) | One `if / else if` ladder vs a chain |
+
+```bash
+npm run demo:chain
+```

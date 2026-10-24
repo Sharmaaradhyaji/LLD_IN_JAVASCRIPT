@@ -45,3 +45,31 @@ Treat a single item and a group of items the same way — only for tree-shaped d
 ```bash
 npm run demo:composite
 ```
+
+### Proxy
+
+Put a stand-in in front of an object to control when, whether, or how a call gets through. The four types — virtual, protection, caching, remote — are the demo.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [proxy_pattern/pattern_understanding.md](./proxy_pattern/pattern_understanding.md) | Problem, issues without it, the four types, UML, Proxy vs Decorator vs Adapter |
+| [proxy.md](./proxy_pattern/proxy.md) | Document portal: one section per proxy type |
+| [proxy.ts](./proxy_pattern/proxy.ts) | Eager loading and copy-pasted checks vs the four proxies |
+
+```bash
+npm run demo:proxy
+```
+
+### Bridge
+
+Split a type that varies in two independent directions so each side can grow without a class per combination. Payroll reports × PDF / HTML / CSV is the demo.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [bridge_pattern/pattern_understanding.md](./bridge_pattern/pattern_understanding.md) | Problem, issues without it, UML, where the shape shows up, Bridge vs Strategy vs Adapter |
+| [bridge.md](./bridge_pattern/bridge.md) | Salary slip and tax summary, each drawn by a swappable renderer |
+| [bridge.ts](./bridge_pattern/bridge.ts) | A 2×2 switch vs reports composed with renderers |
+
+```bash
+npm run demo:bridge
+```

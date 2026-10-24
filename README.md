@@ -125,11 +125,14 @@ npm run demo:dip              # Dependency Inversion
 npm run demo:decorator        # Decorator — coffee toppings
 npm run demo:adapter          # Adapter — payment gateway integration
 npm run demo:composite        # Composite — file explorer tree
+npm run demo:proxy            # Proxy — document portal (4 types)
+npm run demo:bridge           # Bridge — payroll reports × formats
 npm run demo:singleton        # Singleton — classic Logger
 npm run demo:singleton-http   # Singleton — production HttpClient
 npm run demo:strategy         # Strategy — payment checkout
 npm run demo:command          # Command — smart home remote
 npm run demo:template         # Template Method — employee data import
+npm run demo:chain            # Chain of Responsibility — expense approval
 npm run demo:notification     # Case study — Notification System
 npm run demo:music-player     # Case study — Music Player App
 ```
@@ -232,6 +235,30 @@ A use-case-specific pattern: only for tree-shaped data, where one call should wo
 
 **One-liner:** Leaf and container share one interface, so `item.getSizeKb()` works on a file or an entire folder tree.
 
+### 5d. Proxy Pattern (Document Portal)
+
+A use-case-specific pattern: a stand-in with the same interface, used only to control access to an existing object. Four types — virtual, protection, caching, remote.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [pattern_understanding.md](./structural_patterns/proxy_pattern/pattern_understanding.md) | Problem, issues without it, the four types, UML, Proxy vs Decorator vs Adapter |
+| [proxy.md](./structural_patterns/proxy_pattern/proxy.md) | Document portal: one section per proxy type |
+| [proxy.ts](./structural_patterns/proxy_pattern/proxy.ts) | Eager loading and copy-pasted checks vs the four proxies |
+
+**One-liner:** Same interface as the real object; the proxy decides when, whether, or how the call gets through.
+
+### 5e. Bridge Pattern (Payroll Reports)
+
+A use-case-specific pattern: only when two independent axes would otherwise multiply into a class for every combination.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [pattern_understanding.md](./structural_patterns/bridge_pattern/pattern_understanding.md) | Problem, issues without it, UML, where the shape shows up, Bridge vs Strategy vs Adapter |
+| [bridge.md](./structural_patterns/bridge_pattern/bridge.md) | Salary slip and tax summary, each drawn by a swappable renderer |
+| [bridge.ts](./structural_patterns/bridge_pattern/bridge.ts) | A 2×2 switch vs reports composed with renderers |
+
+**One-liner:** A report holds a renderer. New reports and new formats are each one class, not a new class per pair.
+
 ### 6. Singleton Pattern (Logger + Production HttpClient)
 
 One instance, global access. Textbook `getInstance()` — plus the module-export style used in real apps for `HttpClient`.
@@ -280,6 +307,18 @@ A use-case-specific pattern: only when several variants follow the same fixed st
 
 **One-liner:** The base class owns the recipe; subclasses only fill in the steps that differ.
 
+### 8c. Chain of Responsibility (Expense Approval)
+
+A use-case-specific pattern: a request is offered to a line of handlers, and each one either handles it or passes it on. The sender knows only the first handler.
+
+| Resource | What you'll learn |
+|----------|-------------------|
+| [pattern_understanding.md](./behavioral_patterns/chain_of_responsibility_pattern/pattern_understanding.md) | Problem, issues without it, UML, where the shape shows up, when not to use |
+| [chain.md](./behavioral_patterns/chain_of_responsibility_pattern/chain.md) | Manager → Director → VP, then a CFO linked in |
+| [chain.ts](./behavioral_patterns/chain_of_responsibility_pattern/chain.ts) | One `if / else if` ladder vs a chain |
+
+**One-liner:** Each handler signs the expense or forwards it. The submitter never learns the limits.
+
 ### 9. Case Study — Notification System
 
 Combines Singleton + Decorator + Observer + Strategy into one interview-ready design.
@@ -320,7 +359,10 @@ Following the journey map above:
 - [x] **Adapter** — Payment gateway integration (structural)
 - [x] **Composite** — File explorer tree (structural)
 - [x] **Template Method** — Employee data import (behavioral)
-- [ ] **More patterns** — Proxy, Iterator, State…
+- [x] **Proxy** — Document portal: virtual, protection, caching, remote (structural)
+- [x] **Chain of Responsibility** — Expense approval (behavioral)
+- [x] **Bridge** — Payroll reports × output formats (structural)
+- [ ] **More patterns** — Iterator, State…
 - [ ] **UML warmups** — association, aggregation, composition
 - [x] **Case study** — Notification System (Singleton + Decorator + Observer + Strategy)
 - [x] **Case study** — Music Player App (Singleton + Factory + Strategy + Adapter + Facade)
